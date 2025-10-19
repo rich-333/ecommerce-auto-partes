@@ -1,4 +1,3 @@
-@vite('resources/css/app.css')
 <footer class=" bg-footer px-5 text-white"> 
   <div class="max-w-8xl flex-col justify-between items-center w-full ">
     <div class="flex justify-around py-14">

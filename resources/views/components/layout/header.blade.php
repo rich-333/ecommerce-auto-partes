@@ -1,4 +1,3 @@
-@vite('resources/css/app.css')
 <header class=" bg-heading text-white flex px-15 max-h-20">
   <div class=" max-w-8xl flex justify-between items-center w-full ">
     <a href="home" aria-label="Ir al inicio" >
