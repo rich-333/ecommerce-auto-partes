@@ -1,5 +1,5 @@
-<header class=" bg-heading text-white flex px-15 max-h-20">
-  <div class=" max-w-8xl flex justify-between items-center w-full ">
+<header class=" bg-heading text-white flex  max-h-24">
+  <div class=" max-w-8xl flex justify-between items-center w-7xl mx-auto">
     <a href="home" aria-label="Ir al inicio" >
       <img src="{{ asset('images/LogoTurboParts.png') }}" alt="Turbo Parts" class="w-20">
     </a>
