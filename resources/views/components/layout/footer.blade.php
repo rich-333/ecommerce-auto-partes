@@ -1,6 +1,6 @@
 <footer class=" bg-footer px-5 text-white"> 
-  <div class="max-w-8xl flex-col justify-between items-center w-full ">
-    <div class="flex justify-around py-14">
+  <div class="max-w-8xl flex-col justify-between items-center w-7xl mx-auto">
+    <div class="flex justify-between py-14 pr-25">
       <address class="flex flex-col gap-5 not-italic">
         <h3 class=" font-bold">Contactanos</h3>
         <ul class="flex flex-col gap-6 text-sm ml-9">
@@ -50,7 +50,7 @@
       </section>
     </div>
 
-    <div class=" flex justify-between items-center border-y-2 w-6xl mx-auto border-icons">
+    <div class=" flex justify-between items-center border-y-2 w-full border-icons">
       <div>
         <img src="{{ asset('images/LogoTurboParts.png') }}" alt="Turbo Parts" class="w-20">
       </div>
@@ -81,7 +81,7 @@
       </nav>
     </div>
 
-    <div class="flex justify-between items-center w-6xl mx-auto py-4">
+    <div class="flex justify-between items-center w-full py-4">
       <small class="opacity-50">Copyright 2025 © Turbo Parts Theme. All right reserved.</small>
       <ul class="flex items-center gap-3">
         <li>
