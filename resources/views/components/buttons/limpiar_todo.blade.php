@@ -1,0 +1,1 @@
+<button class="rounded-lg bg-gray-300 py-3 px-6 font-semibold">Limpiar todo</button>
