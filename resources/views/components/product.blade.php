@@ -1,7 +1,7 @@
 <article class=" w-60 h-112">
   <div class=" relative h-60">
     <img class="w-full rounded-lg border-carousel-border border-2" src=" {{ asset('images/ejem.svg') }} " alt="">
-    <div class=" absolute top-3 left-3 bg-discount w-10 h-6 rounded-sm text-center font-semibold text-xs md:text-sm text-white">32%</div>
+    <x-discount />
 
     <button class=" cursor-pointer">
       <svg class="absolute top-3 right-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,8 +18,8 @@
       <h3 class=" font-medium text-sm">Zerex G05 Phosphate Free Antifreeze Coolant</h3>
       <div class="flex justify-between items-center">
         <div class="flex gap-1 items-end">
-          <span class=" text-price font-bold text-2xl">33.43 Bs.</span>
-          <span class=" text-txt-footer font-medium">48.55 Bs.</span>
+          <x-price_new/>
+          <x-price_base/>
         </div>
         <button class=" bg-discount rounded-lg p-2 cursor-pointer">
           <img src=" {{ asset('images/icons/cart.svg') }} " alt="">
