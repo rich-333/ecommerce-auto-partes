@@ -8,10 +8,10 @@
 
     @vite('resources/css/app.css')
 </head>
-<body>
+<body class=" bg-main-primary">
   <x-layout.header />
 
-  <main class="bg-main-primary">
+  <main>
     @yield('content')
   </main>
 
