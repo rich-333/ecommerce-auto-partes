@@ -1,0 +1,18 @@
+{
+    "name": "Turbo Parts",
+    "short_name": "Repuestos",
+    "start_url": "/",
+    "scope": "/",
+    "background_color": "#f5f8fb",
+    "description": "Tienda de repuestos Turbo Part donde encontraras los mejores repuestos para tu automovil",
+    "display": "fullscreen",
+    "theme_color": "#020617",
+    "icons": [
+        {
+            "src": "images/LogoTurboParts.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
