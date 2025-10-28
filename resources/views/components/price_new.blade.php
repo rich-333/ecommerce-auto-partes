@@ -1,1 +1,1 @@
-<span class=" text-price font-bold text-2xl">33.43 Bs.</span>
+<span class=" text-price font-bold text-2xl">{{ $priceNew }} Bs.</span>

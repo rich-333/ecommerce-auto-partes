@@ -1,52 +1,37 @@
-<section class="">
-  <div class=" flex flex-col gap-2 mb-6">
-    <h2 class=" font-bold mb-2">filtrar por categoria</h2>
-    <div>
-      <input class=" shadow-xs" type="checkbox" name="category">
-      <label class=" font-medium text-sm md:text-base" for="">Frenos</label>
+<section>
+  <form action="">
+    <div class=" flex flex-col gap-2 mb-6">
+      <h2 class="text-base md:text-lg font-semibold text-gray-700 uppercase tracking-wide mb-3 border-b border-gray-300 pb-1">filtrar por categoria</h2>
+      @foreach ($categorias as $categoria)
+        <div class="flex items-center gap-1">
+          <input class=" shadow-xs" type="checkbox" id="{{ $categoria->nombre }}" name="category[]" value="{{ $categoria->id_categoria }}">
+          <label class=" font-medium text-sm md:text-base" for="{{ $categoria->nombre }}">{{ $categoria->nombre }}</label>
+        </div>
+      @endforeach
     </div>
-    <div>
-      <input class=" shadow-xs" type="checkbox" name="category">
-      <label class=" font-medium text-sm md:text-base" for="">Empaques</label>
-    </div>
-    <div>
-      <input class=" shadow-xs" type="checkbox" name="category">
-      <label class=" font-medium text-sm md:text-base" for="">Filtros</label>
-    </div>
-    <div>
-      <input class=" shadow-xs" type="checkbox" name="category">
-      <label class=" font-medium text-sm md:text-base" for="">Radiadores</label>
-    </div>
-    <div>
-      <input class=" shadow-xs" type="checkbox" name="category">
-      <label class=" font-medium text-sm md:text-base" for="">Pistones</label>
-    </div>
-  </div>
 
-  <div class="flex flex-col gap-2 mb-6">
-    <h2 class="font-bold mb-2">Filtrar por precio</h2>
-    <div>
-      <input class="range-minimal" type="range" name="price" id="">
-      <span>0</span>
-      <span class="">5000</span>
+    <div class="flex flex-col gap-2 mb-6">
+      <h2 class="text-base md:text-lg font-semibold text-gray-700 uppercase tracking-wide mb-3 border-b border-gray-300 pb-1">Filtrar por precio</h2>
+      <div>
+        <input class="range-minimal" type="range" name="price" min="0" max="5000" value="5000" id="priceRange">
+        <div class="flex justify-between items-center">
+          <span>0 Bs.</span>
+          <span id="priceValue">5000 Bs.</span>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="flex flex-col gap-2">
-    <h2 class="font-bold mb-2">Marcas</h2>
-    <div class=" flex items-center gap-1">
-      <input class=" shadow-xs" type="radio" name="brand">
-      <label class=" font-medium text-sm md:text-base" for="">Marca 1</label>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-base md:text-lg font-semibold text-gray-700 uppercase tracking-wide mb-3 border-b border-gray-300 pb-1">Marcas</h2>
+
+      @foreach ($marcas as $marca)
+        <div class=" flex items-center gap-1">
+          <input class=" shadow-xs" type="radio" id="{{ $marca->nombre }}" name="brand" value="{{ $marca->id_marca }}">
+          <label class=" font-medium text-sm md:text-base" for="{{ $marca->nombre }}">{{ $marca->nombre }} </label>
+        </div>
+      @endforeach
     </div>
-    <div class=" flex items-center gap-1">
-      <input class=" shadow-xs" type="radio" name="brand">
-      <label class=" font-medium text-sm md:text-base" for="">Marca 1</label>
-    </div>
-    <div class=" flex items-center gap-1">
-      <input class=" shadow-xs" type="radio" name="brand">
-      <label class=" font-medium text-sm md:text-base" for="">Marca 1</label>
-    </div>
-  </div>
+  </form>
 </section>
 
 <style>
@@ -87,3 +72,11 @@
     border: none;
   }
 </style>
+
+<script>
+  const priceInput = document.getElementById('priceRange');
+  const priceValue = document.getElementById('priceValue');
+  priceInput.addEventListener('input', () => {
+    priceValue.textContent = priceInput.value;
+  });
+</script>

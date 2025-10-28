@@ -1,1 +1,1 @@
-<span class=" text-txt-footer font-medium line-through">48.55 Bs.</span>
+<span class=" text-txt-footer font-medium line-through">{{ $priceBase }} Bs.</span>
